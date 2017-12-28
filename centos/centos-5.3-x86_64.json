@@ -151,10 +151,17 @@
     }
   ],
   "post-processors": [
-    {
-      "output": "../builds/{{user `box_basename`}}.{{.Provider}}.box",
-      "type": "vagrant"
-    }
+    [
+      {
+        "output": "../builds/{{user `box_basename`}}.{{.Provider}}.box",
+        "type": "vagrant"
+      },
+      {
+        "box_tag": "{{user `box_tag`}}",
+        "type": "vagrant-cloud",
+        "version": "{{user `box_version`}}"
+      }
+    ]
   ],
   "provisioners": [
     {
