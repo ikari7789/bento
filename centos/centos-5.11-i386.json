@@ -175,7 +175,7 @@
         "../_common/vmware.sh",
         "../_common/parallels.sh",
         "scripts/cleanup.sh",
-        "../_common/minimize.sh"
+        "scripts/centos-5/minimize.sh"
       ],
       "type": "shell"
     }
